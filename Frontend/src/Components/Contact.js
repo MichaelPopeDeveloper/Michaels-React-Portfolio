@@ -23,7 +23,7 @@ export default class Contact extends Component {
     .catch(error => console.log(error));
   }
 
-  handleTextChange = (event) => this.setState({[event.target.name]: event.target.value})
+  handleTextChange = (event) => this.setState({[event.target.name]: event.target.value});
 
 
   render() {
