@@ -1,0 +1,169 @@
+a {
+  color: black;
+}
+
+a:hover {
+  color: black;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  text-align: left;
+}
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Force table to not be like tables anymore */
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 3px solid #ccc;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+}
+.home-h1 {
+  font-size: 220%;
+}
+@media screen and (min-width: 540px) {
+  .home-h1 {
+    font-size: 500%;
+  }
+}
+
+.home-secondary {
+  font-size: 90%;
+}
+@media screen and (min-width: 540px) {
+  .home-secondary {
+    font-size: 200%;
+  }
+}
+
+.about-p {
+  text-align: left;
+  color: white;
+  font-size: 90%;
+  letter-spacing: 3px;
+}
+@media screen and (min-width: 700px) {
+  .about-p {
+    font-size: 170%;
+  }
+}
+
+#code-logo {
+  font-size: 100%;
+}
+@media screen and (min-width: 540px) {
+  #code-logo {
+    font-size: 450%;
+  }
+}
+
+.tech-logo-react {
+  font-size: 365%;
+  color: skyblue;
+}
+
+.tech-logo-HTML5 {
+  font-size: 365%;
+  color: #e34c26;
+}
+
+.tech-logo-sass {
+  font-size: 365%;
+  color: #c69;
+}
+
+.tech-logo-javascript {
+  font-size: 365%;
+  color: #F0DB4F;
+}
+
+.tech-logo-typescript {
+  font-size: 365%;
+}
+
+.tech-logo-nodejs {
+  font-size: 365%;
+  color: #6cc24a;
+}
+
+.tech-logo-express {
+  font-size: 365%;
+  color: black;
+}
+
+@media screen and (min-width: 570px) {
+  .tech-logo-react {
+    font-size: 700%;
+  }
+
+  .tech-logo-HTML5 {
+    font-size: 700%;
+  }
+
+  .tech-logo-sass {
+    font-size: 700%;
+  }
+
+  .tech-logo-javascript {
+    font-size: 700%;
+  }
+
+  .tech-logo-typescript {
+    font-size: 700%;
+  }
+
+  .tech-logo-nodejs {
+    font-size: 700%;
+  }
+
+  .tech-logo-express {
+    font-size: 700%;
+  }
+}
+.contact-form {
+  width: 100%;
+}
+@media screen and (min-width: 540px) {
+  .contact-form {
+    width: 75%;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */

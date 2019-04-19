@@ -1,0 +1,205 @@
+// Home Variables
+$smHomeH1Size: 220%;
+$lgHomeH1Size: 500%;
+
+$smHomePSize: 90%;
+$lgHomePSize: 200%;
+
+$smAboutPSize: 90%;
+$lgAboutPSize: 170%;
+
+
+// Tech Stack Variables
+$techLogoSize: 365%;
+$lgTechLogoSize: 700%;
+
+$reactLogoColor: skyblue;
+$nodejsLogoColor: #6cc24a;
+$expressLogoColor: black;
+
+$smCodeLogo: 100%;
+$lgCodeLogo: 450%; 
+
+//Contact variables
+$smFormWidth: 100%;
+$lgFormWidth: 75%;
+
+
+
+a {
+  color: black;
+}
+a:hover {
+  color: black;
+}
+th {
+text-align: left;
+}
+td {
+text-align: left;
+}
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+  tr { 
+    border: 3px solid #ccc;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+  }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+    padding-left: 50%; 
+    text-align: center;
+    overflow: hidden;
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+  }
+
+	
+}
+
+//Home styles
+.home-h1 {
+  font-size: $smHomeH1Size;
+
+  @media screen and (min-width: 540px) {
+  font-size: $lgHomeH1Size;
+  }
+}
+
+.home-secondary {
+  font-size: $smHomePSize;
+
+  @media screen and (min-width: 540px) {
+  font-size: $lgHomePSize;
+  }
+}
+
+  
+
+
+// ABOUT ME STYLES
+.about-p {
+  text-align: left;
+  color: white;
+  font-size: $smAboutPSize;
+  letter-spacing: 3px;
+
+    
+  @media  screen and (min-width: 700px){
+      font-size: $lgAboutPSize;
+  }
+}
+
+//TECHSTACK STYLES
+
+#code-logo {
+  font-size: $smCodeLogo;
+  @media screen and (min-width: 540px) {
+    font-size: $lgCodeLogo;
+    }
+}
+
+.tech-logo-react {
+  font-size: $techLogoSize;
+  color: skyblue;
+}
+
+.tech-logo-HTML5 {
+  font-size: $techLogoSize;
+  color: #e34c26;
+}
+
+.tech-logo-sass {
+  font-size: $techLogoSize;
+  color: #c69;
+}
+
+.tech-logo-javascript {
+  font-size: $techLogoSize;
+  color: #F0DB4F;
+}
+
+.tech-logo-typescript {
+  font-size: $techLogoSize;
+//  color: #F0DB4F;
+}
+
+.tech-logo-nodejs {
+  font-size: $techLogoSize;
+  color: $nodejsLogoColor;
+}
+
+.tech-logo-express {
+  font-size: $techLogoSize;
+  color: $expressLogoColor;
+}
+
+
+
+@media screen and (min-width: 570px) {
+  .tech-logo-react {
+    font-size: $lgTechLogoSize;
+  }
+  
+  .tech-logo-HTML5 {
+    font-size: $lgTechLogoSize;
+  }
+  
+  
+  .tech-logo-sass {
+    font-size: $lgTechLogoSize;
+  }
+  
+  .tech-logo-javascript {
+    font-size: $lgTechLogoSize
+  }
+  
+  .tech-logo-typescript {
+    font-size: $lgTechLogoSize;
+  }
+  
+  .tech-logo-nodejs {
+    font-size: $lgTechLogoSize;
+  }
+  
+  .tech-logo-express {
+    font-size: $lgTechLogoSize;
+  }
+}
+
+//Contact styles
+.contact-form {
+width: $smFormWidth;
+@media screen and (min-width: 540px) {
+  width: $lgFormWidth;
+  }
+}
