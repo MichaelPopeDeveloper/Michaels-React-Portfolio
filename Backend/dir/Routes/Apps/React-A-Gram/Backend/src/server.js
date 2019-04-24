@@ -5,14 +5,12 @@ var express = require("express");
 var session = require("express-session");
 var passport = require("passport");
 var logger = require("morgan");
-var MainRoute_1 = require("./Routes/MainRoute");
-var MainAPIRoute_1 = require("./Routes/API/MainAPIRoute");
-var AppsRoute_1 = require("./Routes/AppsRoute");
+var UserRoute_1 = require("./routes/UserRoute");
 var mongoose_1 = require("mongoose");
 var Server = (function () {
     function Server() {
         this.port = process.env.PORT || 3001;
-        this.DB_URL = process.env.DB_URL || 'mongodb://localhost:27017/michaels-portfolio';
+        this.DB_URL = process.env.DB_URL || 'mongodb://localhost:27017/react-a-gram';
         this.express_session_secret = process.env.session_secret || 'midoria-shonen';
         this.app = express();
         this.config();
@@ -34,7 +32,8 @@ var Server = (function () {
         this.app.use(session({
             secret: this.express_session_secret,
             resave: false,
-            saveUninitialized: false
+            saveUninitialized: false,
+            cookie: {}
         }));
         this.app.use(passport.initialize());
         this.app.use(passport.session());
@@ -48,13 +47,7 @@ var Server = (function () {
         });
     };
     Server.prototype.routes = function () {
-        this.app.use(express.static('./public/Views/Portfolio_View/build'));
-        this.app.use(express.static('./public/Views/WeatherCast_View/build'));
-        this.app.use(express.static('./public/Views/Podomoro_View/build'));
-        this.app.use(express.static('./public/Views/React-A-Gram_View/build'));
-        this.app.use('/api', MainAPIRoute_1.MainAPIRoute);
-        this.app.use('/apps', AppsRoute_1.AppsRoute);
-        this.app.use('/', MainRoute_1.MainRoute);
+        this.app.use('/user', UserRoute_1.userRoute);
     };
     return Server;
 }());

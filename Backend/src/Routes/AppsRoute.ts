@@ -1,5 +1,6 @@
 import * as express from 'express';
 import * as path from 'path';
+import { userRoute as UserRoute } from './Apps/React-A-Gram/Backend/src/routes/UserRoute';
 // import * as jwt from 'jsonwebtoken';
 // import * as crypto from 'crypto';
 // import { user } from '../models/User';
@@ -11,4 +12,8 @@ export const AppsRoute = router
   })
   .get('/podomoro', (req, res) => {
     res.sendFile(path.join(__dirname, '../../public/Views/Podomoro_View/build', 'index.html'));
-  });
+  })
+  .get('/reactagram', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../public/Views/React-A-Gram_View/build', 'index.html'));
+  })
+  .use('/reactagram/user', UserRoute);

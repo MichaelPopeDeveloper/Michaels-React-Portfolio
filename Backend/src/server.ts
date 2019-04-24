@@ -18,6 +18,8 @@ import { connect } from 'mongoose';
 export class Server {
   private port: any = process.env.PORT || 3001;
   public app: express.Application;
+  private DB_URL = process.env.DB_URL || 'mongodb://localhost:27017/michaels-portfolio';
+  private express_session_secret =  process.env.session_secret || 'midoria-shonen';
 
   /**
    * Bootstrap the application.
@@ -84,7 +86,7 @@ export class Server {
 
     this.app.use(
       session({
-        secret: 'midoria-shonen',
+        secret: this.express_session_secret,
         resave: false,
         saveUninitialized: false,
       }));
@@ -92,9 +94,9 @@ export class Server {
     this.app.use(passport.initialize());
     this.app.use(passport.session());
 
-    // connect('mongodb://localhost:27017/react-a-gram', { useNewUrlParser: true })
-    //   .then(() => console.log('Connected to MongoDB'))
-    //   .catch(err => console.log(err));
+    connect(this.DB_URL, { useNewUrlParser: true })
+      .then(() => console.log('Connected to MongoDB'))
+      .catch(err => console.log(err));
 
     // use cookie parser middleware
     // this.app.use(cookieParser("SECRET_GOES_HERE"));
@@ -131,6 +133,7 @@ export class Server {
     this.app.use(express.static('./public/Views/Portfolio_View/build'));
     this.app.use(express.static('./public/Views/WeatherCast_View/build'));
     this.app.use(express.static('./public/Views/Podomoro_View/build'));
+    this.app.use(express.static('./public/Views/React-A-Gram_View/build.1'));
     this.app.use('/api', MainAPIRoute);
     this.app.use('/apps', AppsRoute);
     this.app.use('/', MainRoute);
