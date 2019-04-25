@@ -88,5 +88,5 @@ var UserSchema = new mongoose.Schema({
                 }]
         }]
 });
-exports.User = mongoose.model('React-A-Gram-User', UserSchema);
+exports.User = mongoose.model('User', UserSchema);
 //# sourceMappingURL=User.js.map

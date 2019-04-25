@@ -133,7 +133,7 @@ export class Server {
     this.app.use(express.static('./public/Views/Portfolio_View/build'));
     this.app.use(express.static('./public/Views/WeatherCast_View/build'));
     this.app.use(express.static('./public/Views/Podomoro_View/build'));
-    this.app.use(express.static('./public/Views/React-A-Gram_View/build.1'));
+    this.app.use(express.static('./public/Views/ReactAGram_View/build'));
     this.app.use('/api', MainAPIRoute);
     this.app.use('/apps', AppsRoute);
     this.app.use('/', MainRoute);

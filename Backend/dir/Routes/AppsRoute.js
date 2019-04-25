@@ -12,7 +12,7 @@ exports.AppsRoute = router
     res.sendFile(path.join(__dirname, '../../public/Views/Podomoro_View/build', 'index.html'));
 })
     .get('/reactagram', function (req, res) {
-    res.sendFile(path.join(__dirname, '../../public/Views/React-A-Gram_View/build', 'index.html'));
+    res.sendFile(path.join(__dirname, '../../public/Views/ReactAGram_View/build', 'index.html'));
 })
     .use('/reactagram/user', UserRoute_1.userRoute);
 //# sourceMappingURL=AppsRoute.js.map

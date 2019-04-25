@@ -51,7 +51,7 @@ var Server = (function () {
         this.app.use(express.static('./public/Views/Portfolio_View/build'));
         this.app.use(express.static('./public/Views/WeatherCast_View/build'));
         this.app.use(express.static('./public/Views/Podomoro_View/build'));
-        this.app.use(express.static('./public/Views/React-A-Gram_View/build'));
+        this.app.use(express.static('./public/Views/ReactAGram_View/build'));
         this.app.use('/api', MainAPIRoute_1.MainAPIRoute);
         this.app.use('/apps', AppsRoute_1.AppsRoute);
         this.app.use('/', MainRoute_1.MainRoute);
