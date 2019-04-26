@@ -6,6 +6,6 @@ import * as path from 'path';
 const router = express.Router();
 
 export const MainRoute = router
-  .get('/*', (req, res) => {
-    res.redirect('/');
+  .get('/', (req, res) => {
+     res.sendFile(path.join(__dirname, '../../public/Views/Portfolio_View/build/index.html'));
   });

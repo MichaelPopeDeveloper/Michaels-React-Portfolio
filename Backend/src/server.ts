@@ -130,13 +130,12 @@ export class Server {
    */
   private routes() {
     // use router middleware
-    this.app.use(express.static('./public/Views/Portfolio_View/build'));
+    this.app.use(express.static(path.join(__dirname, '../public/Views/Portfolio_View/build')));
     this.app.use(express.static('./public/Views/WeatherCast_View/build'));
-    this.app.use(express.static('./public/Views/Podomoro_View/build'));
-    this.app.use(express.static('./public/Views/ReactAGram_View/build'));
+    this.app.use(express.static(path.join('./public/Views/Podomoro_View/build')));
+    this.app.use('/', MainRoute);    
     this.app.use('/api', MainAPIRoute);
     this.app.use('/apps', AppsRoute);
-    this.app.use('/', MainRoute);
   }
 
 }
