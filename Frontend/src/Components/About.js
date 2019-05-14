@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import MichaelImage from '../assets/michael.jpg';
-import Anime from 'react-anime';
-import Typed from 'react-typed';
+
 
 const About = props => {
   return (
@@ -10,7 +8,7 @@ const About = props => {
         <div style={{width: '80%'}}>
         <h1 className="text-white text-align-left pt-4 mt-4" style={{textAlign: 'left', letterSpacing: '7px'}}>BIO</h1>
         <p className="about-p">
-        I'm Michael, a self-taught software engineer & fullstack developer native to Las Vegas. I began programming almost 4 years ago and have never looked back. Since the beggining my journey into the world of tech, i've worked for a Las Vegas company working on the backend of an ECommerce platorm, as well a a variety of side projects. Programming for me is more than just a hobby, it's my passion. 
+        I'm Michael, a software engineer & fullstack developer native to Las Vegas. I began programming almost 4 years ago and have never looked back. Since the beggining my journey into the world of tech, i've worked for a Las Vegas company working on the backend of an ECommerce platorm, as well a variety of my own projects. Programming for me is much more than just a career, it's my passion. 
         </p>
 
         </div>
